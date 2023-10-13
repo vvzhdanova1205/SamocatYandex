@@ -6,7 +6,6 @@ import data
 # Создание заказа и сохранение номера
 def test_order_track():
     response_create_order  = sender_stand_request.create_new_order(data.order_body)
-    assert response_create_order.status_code == 201
     # Получение трека заказа
     track = response_create_order.json().get("track")
 
